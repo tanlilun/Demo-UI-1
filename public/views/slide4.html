@@ -111,25 +111,32 @@
 
     .overlay-text-wrapper {
         position: absolute;
-        left: 10%;
-        bottom: 25%;
-        width: 30%;
+        left: 5%;
+        bottom: 5%;
+        width: 50%;
         text-align: left;
         pointer-events: none;
     }
 
     .overlay-text {
         color: white;
-        font-size: clamp(12px, 2vw, 32px);
+        font-size: clamp(8px, 3vw, 24px); /* Adjusted clamp range for better scaling */
         font-weight: bold;
+        font-family: 'Roboto', sans-serif; /* Or any other preferred font */
         text-transform: uppercase;
         pointer-events: none;
+        
+        /* Enhanced text-shadow for better contrast and readability */
         text-shadow: 
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000;
+            1px 1px 3px rgba(0, 0, 0, 0.7),   /* Soft shadow */
+            0 0 8px rgba(0, 0, 0, 0.6),        /* Glow effect */
+            0 0 10px rgba(0, 0, 0, 0.5);       /* Larger glow for effect */
+        
+        /* Optional: Consider adding a subtle text stroke (outline) for extra boldness */
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6); /* Chrome/ Safari */
+        text-stroke: 1px rgba(0, 0, 0, 0.6); /* Standard syntax */
     }
+
 
     .overlay-logos {
         position: absolute;
@@ -168,8 +175,6 @@
         </h3>
         <div class="slide-inner">
             <div class="s4-section">
-                <!-- <div id="video-section" class="hidden">
-                </div> -->
                 <div class="video-wrapper">
                     <div id="video-section" class="hidden">
                     </div>
